@@ -1,0 +1,51 @@
+{
+  "name": "github-fetcher-fullstack-v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "react": "webpack -d --watch",
+    "server": "nodemon server/index.js rs",
+    "seedschedule": "node database/seedscripts/seedschedule.js",
+    "seedfeed": "node database/seedscripts/seedfeed.js",
+    "test": "jest --coverage"
+  },
+  "author": "Joe Boulos",
+  "license": "ISC",
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "babel-core": "^6.23.1",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^6.3.2",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "body-parser": "^1.18.3",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-15": "^1.2.0",
+    "enzyme-to-json": "^3.3.5",
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "express": "^4.15.0",
+    "jest": "^23.6.0",
+    "jquery": "^3.1.1",
+    "mongoose": "^4.9.6",
+    "react-awesome-modal": "^2.0.5",
+    "react-test-renderer": "^15.6.2",
+    "request": "^2.81.0",
+    "sinon": "^7.2.2",
+    "webpack": "^2.2.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "node-fetch": "^2.3.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^2.1.1"
+  }
+}
