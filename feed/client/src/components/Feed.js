@@ -25,6 +25,7 @@ const Feed = ({ ramsFeed }) => (
             {/* <div className="row">
         <div className="col-md-6"> */}
             <td>
+              <h1>Updated Entry</h1>
               {/* <div> */}
               <div><img src={`${ramFeed.bigphoto}`} width={800} height={500} /></div>
               <div>
