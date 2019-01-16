@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const path = require('path');
 const FeedDB = require('../database/Models/FeedDB.js');
 
 const app = express();
@@ -23,6 +24,19 @@ app.get('/espn/feeds', (req, res) => {
       console.err(err);
     });
 });
+
+// Serve static assets if in production
+// check to see if the node environment is in production
+
+// if (process.env.NODE_ENV === 'production') {
+//   // set static folder
+//   // everyone is using create-react-app
+//   app.use(express.static('client/build'));
+
+//   app.get('*', (req, res) => {
+//     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+//   });
+// }
 
 const port = process.env.PORT || 3005;
 

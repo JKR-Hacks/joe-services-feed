@@ -2,6 +2,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+const onlineDb = require('../../config/keys');
+const api = onlineDb.api;
+
 import Feed from './components/Feed';
 
 class App extends Component {
@@ -15,7 +18,7 @@ class App extends Component {
 
   componentDidMount() {
     // fetch schedule data
-    axios.get('http://localhost:3005/espn/feeds', {
+    axios.get('/espn/feeds', {
       method: 'GET',
       mode: 'no-cors',
       headers: {
