@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "react": "webpack -d --watch",
-    "server": "nodemon server/index.js rs",
+    "start": "nodemon server/index.js rs",
     "seedschedule": "node database/seedscripts/seedschedule.js",
     "seedfeed": "node database/seedscripts/seedfeed.js",
     "test": "jest --coverage"
