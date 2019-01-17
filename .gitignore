@@ -1,8 +1,4 @@
-## Mac OSX ##
-.DS_Store
-
-## NPM ##
-node_modules/
-
-## Compiled files ##
-compiled/
+node_modules
+client/dist/bundle.js
+config
+coverage

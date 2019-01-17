@@ -1,17 +1,18 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/espn/feeds');
+const onlineDb = require('../../config/keys');
 
+mongoose.connect(onlineDb.mongoURI, { useNewUrlParser: true });
 const db = mongoose.connection;
 mongoose.Promise = global.Promise;
 
 db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
+db.once('open', () => {
   console.log('MongoDB is connected to the Feeds database');
 });
 
 
 const feedSchema = {
-  id: {type: Number, unique: true},
+  id: { type: Number, unique: true },
   author: String,
   authorphoto: String,
   title: String,
@@ -19,10 +20,10 @@ const feedSchema = {
   smallphoto: String,
   newsfeed: String,
   videoclip: String,
-  timestamp: String
-}
+  timestamp: String,
+};
 
-const FeedDB = mongoose.model('Feed', feedSchema)
+const FeedDB = mongoose.model('Feed', feedSchema);
 
 module.exports = db;
 module.exports = FeedDB;

@@ -1,6 +1,6 @@
-# Feed Component for ESPN.com NFL Team Page
+# Schedule Component for ESPN.com NFL Team Page
 
->The feed component will appear on the main page.  During each game there will be periodic feed posts by an author.  Each post will include a brief paragraph about the game or event that recently happened in the game as well as photos, videos and timestamps.
+>The schedule component will include a full picture of the teams schedule for the season comprised of several rows and columns with information and statistics for each game.  The information will be pulled from a database and rendered into each row and column.
 
 > Project description
 
@@ -44,6 +44,8 @@ npm install
 ```sh
 To start the server: npm run server
 To start webpack: npm run react
-To seed the Feed database: npm run seedfeed
+To seed the Schedule database: npm run seedschedule
+
+Open service on http://localhost:3005/
 ```
 
