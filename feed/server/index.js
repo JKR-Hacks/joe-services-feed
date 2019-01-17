@@ -24,6 +24,19 @@ app.get('/espn/feeds', (req, res) => {
     });
 });
 
+// Serve static assets if in production
+// check to see if the node environment is in production
+
+// if (process.env.NODE_ENV === 'production') {
+//   // set static folder
+//   // everyone is using create-react-app
+//   app.use(express.static('client/build'));
+
+//   app.get('*', (req, res) => {
+//     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+//   });
+// }
+
 const port = process.env.PORT || 3005;
 
 app.listen(port, () => {

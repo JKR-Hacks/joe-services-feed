@@ -4,6 +4,7 @@ import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import axios from 'axios';
 import App from './App';
+import Feed from '/.components/Feed'
 
 jest.mock('./components/Feed', () => 'Feed');
 
